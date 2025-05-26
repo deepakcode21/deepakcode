@@ -44,8 +44,9 @@ const Testimonials: React.FC = () => {
       icon: <Star className="text-warning-500" />
     },
     {
-      title: "Hackathons Won",
-      value: 3,
+      title: "Active Client",
+      value: 10,
+      suffix: "+",
       icon: <Award className="text-primary-500" />
     }
   ];

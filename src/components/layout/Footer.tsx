@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Youtube, Rocket } from 'lucide-react';
+import { Github, Linkedin, Twitter, Youtube, Rocket, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -22,12 +22,12 @@ const Footer: React.FC = () => {
               <span>Max</span>
             </Link>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Expert MERN Stack developer specializing in MongoDB, Express, React, and Node.js. 
+              Expert Full Stack development specializing in Backend Services, Cloud Services & Cyber Security. 
               Available for freelance work and bringing your ideas to life.
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://github.com/arrowmax"
+                href="https://github.com/deepakcode21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/arrowmax"
+                href="https://www.linkedin.com/in/deepakcode21/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://twitter.com/arrowmax"
+                href="https://x.com/deepakcode21"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
@@ -54,13 +54,13 @@ const Footer: React.FC = () => {
                 <Twitter size={20} />
               </a>
               <a
-                href="https://youtube.com/arrowmax"
+                href="https://www.instagram.com/deepakmax09/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                aria-label="YouTube"
+                aria-label="Instagram"
               >
-                <Youtube size={20} />
+                <Instagram size={20} />
               </a>
             </div>
           </div>
@@ -91,14 +91,14 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-gray-600 dark:text-gray-400">
-                SRM University Delhi-NCR, India
+                New Delhi, Delhi-NCR, India
               </li>
               <li>
                 <a
                   href="mailto:hello@arrowmax.dev"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                 >
-                  hello@arrowmax.dev
+                  deepakcode21@gmail.com
                 </a>
               </li>
             </ul>
@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-dark-600 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-600 dark:text-gray-400 text-center md:text-left mb-4 md:mb-0">
-            © 2025 Deepak 'ArrowMax'. Crafted with MERN, Freelancing & ❤️
+            © 2025 Deepak Code | Crafted with MERN | Freelancing & ❤️
           </p>
           <motion.div
             whileHover={{ y: -5 }}
