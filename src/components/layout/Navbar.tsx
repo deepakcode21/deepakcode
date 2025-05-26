@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-scroll';
-import { Sun, Moon, Menu, X, ArrowUpRight } from 'lucide-react';
-import { useTheme } from '../../context/ThemeContext';
-import Button from '../ui/Button';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-scroll";
+import { Sun, Moon, Menu, X, ArrowUpRight } from "lucide-react";
+import { useTheme } from "../../context/ThemeContext";
+import Button from "../ui/Button";
 
 const navLinks = [
-  { name: 'Home', to: 'hero', offset: -100 },
-  { name: 'About', to: 'about', offset: -100 },
-  { name: 'Skills', to: 'skills', offset: -100 },
-  { name: 'Projects', to: 'projects', offset: -100 },
-  { name: 'Testimonials', to: 'testimonials', offset: -100 },
-  { name: 'Blog', to: 'blog', offset: -100 },
-  { name: 'Pricing', to: 'pricing', offset: -100 },
-  { name: 'Contact', to: 'contact', offset: -100 },
+  { name: "Home", to: "hero", offset: -100 },
+  { name: "About", to: "about", offset: -100 },
+  { name: "Skills", to: "skills", offset: -100 },
+  { name: "Projects", to: "projects", offset: -100 },
+  { name: "Testimonials", to: "testimonials", offset: -100 },
+  { name: "Blog", to: "blog", offset: -100 },
+  { name: "Pricing", to: "pricing", offset: -100 },
+  { name: "Contact", to: "contact", offset: -100 },
 ];
 
 const Navbar: React.FC = () => {
@@ -26,16 +26,16 @@ const Navbar: React.FC = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 dark:bg-dark-900/80 backdrop-blur-md shadow-md py-3'
-          : 'bg-transparent py-5'
+          ? "bg-white/80 dark:bg-dark-900/80 backdrop-blur-md shadow-md py-3"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -49,7 +49,9 @@ const Navbar: React.FC = () => {
             duration={500}
             className="text-2xl font-bold cursor-pointer flex items-center"
           >
-            <span className="text-primary-600 dark:text-primary-400">Deepak</span>
+            <span className="text-primary-600 dark:text-primary-400">
+              Deepak
+            </span>
             <span>Code</span>
           </Link>
 
@@ -79,7 +81,7 @@ const Navbar: React.FC = () => {
               className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors"
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? (
+              {theme === "dark" ? (
                 <Sun className="text-gray-700 dark:text-gray-300" size={20} />
               ) : (
                 <Moon className="text-gray-700 dark:text-gray-300" size={20} />
@@ -127,7 +129,7 @@ const Navbar: React.FC = () => {
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
+            animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden bg-white dark:bg-dark-800 border-t border-gray-100 dark:border-dark-700"

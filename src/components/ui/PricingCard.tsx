@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Card from './Card';
-import Button from './Button';
-import { CheckCircle } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import Card from "./Card";
+import Button from "./Button";
+import { CheckCircle } from "lucide-react";
 
 interface PricingFeature {
   text: string;
@@ -34,10 +34,10 @@ const PricingCard: React.FC<PricingCardProps> = ({
       transition={{ duration: 0.3 }}
       className="h-full"
     >
-      <Card 
-        variant="neuro" 
+      <Card
+        variant="neuro"
         className={`p-6 md:p-8 h-full flex flex-col relative overflow-visible ${
-          popular ? 'border-2 border-primary-500 shadow-lg z-10 scale-105' : ''
+          popular ? "border-2 border-primary-500 shadow-lg z-10 scale-105" : ""
         }`}
       >
         {popular && (
@@ -45,39 +45,45 @@ const PricingCard: React.FC<PricingCardProps> = ({
             Most Popular
           </div>
         )}
-        
+
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <div className="mb-4">
           <span className="text-3xl font-bold">{price}</span>
-          {price !== 'Custom' && <span className="text-gray-500 dark:text-gray-400">/project</span>}
+          {price !== "Custom" && (
+            <span className="text-gray-500 dark:text-gray-400">/project</span>
+          )}
         </div>
         <p className="text-gray-600 dark:text-gray-300 mb-6">{description}</p>
-        
+
         <div className="flex-grow">
           <ul className="space-y-3 mb-6">
             {features.map((feature, index) => (
               <li key={index} className="flex items-start">
-                <CheckCircle 
-                  size={18} 
-                  className={feature.included 
-                    ? "text-success-500 mr-2 mt-0.5" 
-                    : "text-gray-300 dark:text-gray-600 mr-2 mt-0.5"
-                  } 
+                <CheckCircle
+                  size={18}
+                  className={
+                    feature.included
+                      ? "text-success-500 mr-2 mt-0.5"
+                      : "text-gray-300 dark:text-gray-600 mr-2 mt-0.5"
+                  }
                 />
-                <span className={feature.included 
-                  ? "text-gray-700 dark:text-gray-300" 
-                  : "text-gray-400 dark:text-gray-500 line-through"
-                }>
+                <span
+                  className={
+                    feature.included
+                      ? "text-gray-700 dark:text-gray-300"
+                      : "text-gray-400 dark:text-gray-500 line-through"
+                  }
+                >
                   {feature.text}
                 </span>
               </li>
             ))}
           </ul>
         </div>
-        
-        <Button 
-          variant={popular ? "primary" : "outline"} 
-          fullWidth 
+
+        <Button
+          variant={popular ? "primary" : "outline"}
+          fullWidth
           onClick={onButtonClick}
         >
           {buttonText}

@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Section from '../ui/Section';
-import Card from '../ui/Card';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import { Play, RefreshCw, Copy, Terminal } from 'lucide-react';
-import Button from '../ui/Button';
-import { useTheme } from '../../context/ThemeContext';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import Section from "../ui/Section";
+import Card from "../ui/Card";
+import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { Play, RefreshCw, Copy, Terminal } from "lucide-react";
+import Button from "../ui/Button";
+import { useTheme } from "../../context/ThemeContext";
 
 const CodePlayground: React.FC = () => {
   const { theme } = useTheme();
   const [consoleOutput, setConsoleOutput] = useState<string[]>([
-    '> MERN Stack Demo initialized',
-    '> Server running on port 3000',
-    '> Connected to MongoDB Atlas',
-    '> Ready to handle requests!'
+    "> MERN Stack Demo initialized",
+    "> Server running on port 3000",
+    "> Connected to MongoDB Atlas",
+    "> Ready to handle requests!",
   ]);
 
   const javascriptCode = `// Simple Express server setup
@@ -70,19 +70,16 @@ app.listen(port, () => {
   const handleRunCode = () => {
     const newOutput = [
       ...consoleOutput,
-      '> Executing code...',
-      '> POST /api/todos - Created new todo',
-      '> GET /api/todos - Retrieved 3 todos',
-      '> Operation completed successfully'
+      "> Executing code...",
+      "> POST /api/todos - Created new todo",
+      "> GET /api/todos - Retrieved 3 todos",
+      "> Operation completed successfully",
     ];
     setConsoleOutput(newOutput);
   };
 
   const handleClearConsole = () => {
-    setConsoleOutput([
-      '> Console cleared',
-      '> Ready for new operations'
-    ]);
+    setConsoleOutput(["> Console cleared", "> Ready for new operations"]);
   };
 
   const handleCopyCode = () => {
@@ -107,7 +104,7 @@ app.listen(port, () => {
               <span className="ml-2 text-sm font-mono">server.js</span>
             </div>
             <div className="flex space-x-2">
-              <button 
+              <button
                 onClick={handleCopyCode}
                 className="text-gray-400 hover:text-white transition-colors"
                 aria-label="Copy code"
@@ -123,8 +120,8 @@ app.listen(port, () => {
               showLineNumbers
               customStyle={{
                 margin: 0,
-                padding: '16px',
-                background: theme === 'dark' ? '#0d1117' : '#1e1e1e',
+                padding: "16px",
+                background: theme === "dark" ? "#0d1117" : "#1e1e1e",
               }}
             >
               {javascriptCode}
@@ -134,14 +131,17 @@ app.listen(port, () => {
 
         {/* Console Output */}
         <div className="flex flex-col h-full">
-          <Card variant="neuro" className="flex-grow overflow-hidden flex flex-col">
+          <Card
+            variant="neuro"
+            className="flex-grow overflow-hidden flex flex-col"
+          >
             <div className="bg-gray-800 text-white px-4 py-2 flex justify-between items-center">
               <div className="flex items-center">
                 <Terminal size={16} className="mr-2" />
                 <span className="text-sm font-mono">Console</span>
               </div>
               <div className="flex space-x-2">
-                <button 
+                <button
                   onClick={handleClearConsole}
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Clear console"
@@ -177,11 +177,12 @@ app.listen(port, () => {
           </div>
         </div>
       </div>
-      
+
       <div className="mt-6 text-center">
         <p className="text-gray-600 dark:text-gray-300">
-          This is a simplified demo of a MERN stack application. In a real project, I build fully functional 
-          applications with proper architecture, error handling, and testing.
+          This is a simplified demo of a MERN stack application. In a real
+          project, I build fully functional applications with proper
+          architecture, error handling, and testing.
         </p>
       </div>
     </Section>

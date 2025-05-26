@@ -1,42 +1,50 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Section from '../ui/Section';
-import BlogCard from '../ui/BlogCard';
+import React from "react";
+import { motion } from "framer-motion";
+import Section from "../ui/Section";
+import BlogCard from "../ui/BlogCard";
 
 const Blog: React.FC = () => {
   const blogPosts = [
     {
       title: "Building a UPI-OBS Widget for Streamers",
-      excerpt: "Learn how to create a custom widget for OBS that integrates with UPI payment systems for real-time donation tracking during livestreams.",
+      excerpt:
+        "Learn how to create a custom widget for OBS that integrates with UPI payment systems for real-time donation tracking during livestreams.",
       date: "April 10, 2025",
       readTime: "8 min read",
-      image: "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      tags: ["React", "UPI", "OBS", "WebSockets"]
+      image:
+        "https://images.pexels.com/photos/2387418/pexels-photo-2387418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      tags: ["React", "UPI", "OBS", "WebSockets"],
     },
     {
       title: "Creating a Mood-Based Music Player with Spotify API",
-      excerpt: "Discover how to build a music player that analyzes user mood through facial recognition and suggests playlists accordingly using Spotify's API.",
+      excerpt:
+        "Discover how to build a music player that analyzes user mood through facial recognition and suggests playlists accordingly using Spotify's API.",
       date: "March 15, 2025",
       readTime: "12 min read",
-      image: "https://images.pexels.com/photos/4071887/pexels-photo-4071887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      tags: ["React", "Machine Learning", "Spotify API"]
+      image:
+        "https://images.pexels.com/photos/4071887/pexels-photo-4071887.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      tags: ["React", "Machine Learning", "Spotify API"],
     },
     {
       title: "Developing a P2P File Sharing System with WebRTC",
-      excerpt: "A step-by-step guide to building a peer-to-peer file sharing application using WebRTC, with no server required for the actual file transfers.",
+      excerpt:
+        "A step-by-step guide to building a peer-to-peer file sharing application using WebRTC, with no server required for the actual file transfers.",
       date: "February 28, 2025",
       readTime: "10 min read",
-      image: "https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      tags: ["WebRTC", "JavaScript", "P2P"]
+      image:
+        "https://images.pexels.com/photos/2881229/pexels-photo-2881229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      tags: ["WebRTC", "JavaScript", "P2P"],
     },
     {
       title: "Freelancing Tips: How to Price Your Web Development Services",
-      excerpt: "Learn effective strategies for pricing your freelance web development services to maximize both client satisfaction and your income.",
+      excerpt:
+        "Learn effective strategies for pricing your freelance web development services to maximize both client satisfaction and your income.",
       date: "January 20, 2025",
       readTime: "6 min read",
-      image: "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      tags: ["Freelancing", "Business", "Web Development"]
-    }
+      image:
+        "https://images.pexels.com/photos/6694543/pexels-photo-6694543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      tags: ["Freelancing", "Business", "Web Development"],
+    },
   ];
 
   return (
@@ -66,7 +74,7 @@ const Blog: React.FC = () => {
           </motion.div>
         ))}
       </div>
-      
+
       <div className="mt-12 text-center">
         <motion.a
           href="#"

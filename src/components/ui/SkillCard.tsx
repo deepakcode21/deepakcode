@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Card from './Card';
+import React from "react";
+import { motion } from "framer-motion";
+import Card from "./Card";
 
 interface SkillCardProps {
   icon: React.ReactNode;
@@ -16,25 +16,30 @@ const SkillCard: React.FC<SkillCardProps> = ({
   title,
   percentage,
   services,
-  color = 'primary'
+  color = "primary",
 }) => {
   const colorClasses = {
-    primary: 'border-primary-500/20 hover:border-primary-500/40',
-    secondary: 'border-secondary-500/20 hover:border-secondary-500/40',
-    accent: 'border-accent-500/20 hover:border-accent-500/40'
+    primary: "border-primary-500/20 hover:border-primary-500/40",
+    secondary: "border-secondary-500/20 hover:border-secondary-500/40",
+    accent: "border-accent-500/20 hover:border-accent-500/40",
   }[color];
 
   const textColor = {
-    primary: 'text-primary-500',
-    secondary: 'text-secondary-500',
-    accent: 'text-accent-500'
+    primary: "text-primary-500",
+    secondary: "text-secondary-500",
+    accent: "text-accent-500",
   }[color];
 
   return (
-    <Card variant="neuro" className={`p-3 h-full border ${colorClasses} transition-all group`}>
+    <Card
+      variant="neuro"
+      className={`p-3 h-full border ${colorClasses} transition-all group`}
+    >
       <div className="flex flex-col h-full">
         <div className="flex items-center gap-2 mb-3">
-          <div className={`p-2 rounded-md ${textColor} bg-gradient-to-br from-${color}-500/10 to-transparent`}>
+          <div
+            className={`p-2 rounded-md ${textColor} bg-gradient-to-br from-${color}-500/10 to-transparent`}
+          >
             {React.cloneElement(icon as React.ReactElement, { size: 18 })}
           </div>
           <h3 className={`text-sm font-semibold ${textColor}`}>{title}</h3>
@@ -62,10 +67,10 @@ const SkillCard: React.FC<SkillCardProps> = ({
             {services.map((service, index) => (
               <span
                 key={index}
-                className={`px-1.5 py-0.5 rounded-md text-xs font-medium ${
-                  textColor!.replace("500", "400/80")
-
-                } bg-${color}-500/10`}
+                className={`px-1.5 py-0.5 rounded-md text-xs font-medium ${textColor!.replace(
+                  "500",
+                  "400/80"
+                )} bg-${color}-500/10`}
               >
                 {service}
               </span>

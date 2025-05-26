@@ -127,9 +127,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             I'm Deepak{" "}
-            <span className="text-primary-600 dark:text-primary-400">
-              Code
-            </span>
+            <span className="text-primary-600 dark:text-primary-400">Code</span>
             <br />
             <span className="text-3xl md:text-5xl lg:text-6xl">
               Full Stack Magician & Freelancer

@@ -1,60 +1,63 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Section from '../ui/Section';
-import Testimonial from '../ui/Testimonial';
-import Card from '../ui/Card';
-import { Award, Trophy, Star } from 'lucide-react';
-import CountUp from 'react-countup';
-import { useInView } from 'react-intersection-observer';
+import React from "react";
+import { motion } from "framer-motion";
+import Section from "../ui/Section";
+import Testimonial from "../ui/Testimonial";
+import Card from "../ui/Card";
+import { Award, Trophy, Star } from "lucide-react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 const Testimonials: React.FC = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const testimonials = [
     {
-      quote: "Deepak's expertise in the MERN stack is exceptional. He delivered our project ahead of schedule and exceeded our expectations in terms of functionality and design.",
+      quote:
+        "Deepak's expertise in the MERN stack is exceptional. He delivered our project ahead of schedule and exceeded our expectations in terms of functionality and design.",
       author: "Rahul Sharma",
-      role: "Product Manager"
+      role: "Product Manager",
     },
     {
-      quote: "Working with ArrowMax was a game-changer for our startup. His technical skills and problem-solving abilities helped us launch our MVP in record time.",
+      quote:
+        "Working with ArrowMax was a game-changer for our startup. His technical skills and problem-solving abilities helped us launch our MVP in record time.",
       author: "Vikash Jain",
-      role: "Startup Founder"
+      role: "Startup Founder",
     },
     {
-      quote: "Deepak is not just a developer; he's a solution provider. He took time to understand our business needs and delivered a web application that perfectly fits our workflow.",
+      quote:
+        "Deepak is not just a developer; he's a solution provider. He took time to understand our business needs and delivered a web application that perfectly fits our workflow.",
       author: "Vishal Kumar",
-      role: "Business Owner"
-    }
+      role: "Business Owner",
+    },
   ];
 
   const achievements = [
     {
       title: "Projects Completed",
       value: 25,
-      icon: <Trophy className="text-accent-500" />
+      icon: <Trophy className="text-accent-500" />,
     },
     {
       title: "Client Satisfaction",
       value: 100,
       suffix: "%",
-      icon: <Star className="text-warning-500" />
+      icon: <Star className="text-warning-500" />,
     },
     {
       title: "Active Client",
       value: 10,
       suffix: "+",
-      icon: <Award className="text-primary-500" />
-    }
+      icon: <Award className="text-primary-500" />,
+    },
   ];
 
   const badges = [
     "Google Solution Challenge '25 Participant",
     "IEEE Paper Pending",
-    "Freelance Rating ★★★★★"
+    "Freelance Rating ★★★★★",
   ];
 
   return (
@@ -90,13 +93,15 @@ const Testimonials: React.FC = () => {
             <Card key={index} variant="neuro" className="p-6">
               <div className="flex flex-col items-center text-center">
                 <div className="text-4xl mb-4">{achievement.icon}</div>
-                <h3 className="text-lg font-semibold mb-2">{achievement.title}</h3>
+                <h3 className="text-lg font-semibold mb-2">
+                  {achievement.title}
+                </h3>
                 <div className="text-4xl font-bold">
                   {inView ? (
-                    <CountUp 
-                      end={achievement.value} 
-                      duration={2.5} 
-                      suffix={achievement.suffix || ""} 
+                    <CountUp
+                      end={achievement.value}
+                      duration={2.5}
+                      suffix={achievement.suffix || ""}
                     />
                   ) : (
                     <>0{achievement.suffix || ""}</>

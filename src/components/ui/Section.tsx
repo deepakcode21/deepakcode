@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useScrollAnimation, fadeInUp } from '../../hooks/useScrollAnimation';
+import React from "react";
+import { motion } from "framer-motion";
+import { useScrollAnimation, fadeInUp } from "../../hooks/useScrollAnimation";
 
 interface SectionProps {
   id: string;
@@ -16,16 +16,13 @@ const Section: React.FC<SectionProps> = ({
   title,
   subtitle,
   children,
-  className = '',
-  titleClassName = '',
+  className = "",
+  titleClassName = "",
 }) => {
   const { ref, controls } = useScrollAnimation();
 
   return (
-    <section
-      id={id}
-      className={`py-16 md:py-24 px-4 md:px-6 ${className}`}
-    >
+    <section id={id} className={`py-16 md:py-24 px-4 md:px-6 ${className}`}>
       <div className="container mx-auto">
         <motion.div
           ref={ref}
@@ -34,7 +31,9 @@ const Section: React.FC<SectionProps> = ({
           variants={fadeInUp}
           className="text-center mb-12"
         >
-          <h2 className={`text-3xl md:text-4xl font-bold font-heading mb-4 ${titleClassName}`}>
+          <h2
+            className={`text-3xl md:text-4xl font-bold font-heading mb-4 ${titleClassName}`}
+          >
             {title}
           </h2>
           {subtitle && (

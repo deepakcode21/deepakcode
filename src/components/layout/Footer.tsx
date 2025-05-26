@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-scroll';
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Youtube, Rocket, Instagram } from 'lucide-react';
+import React from "react";
+import { Link } from "react-scroll";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Twitter, Rocket, Instagram } from "lucide-react";
 
 const Footer: React.FC = () => {
   return (
@@ -18,12 +18,15 @@ const Footer: React.FC = () => {
               duration={500}
               className="text-2xl font-bold cursor-pointer flex items-center mb-4"
             >
-              <span className="text-primary-600 dark:text-primary-400">Arrow</span>
+              <span className="text-primary-600 dark:text-primary-400">
+                Arrow
+              </span>
               <span>Max</span>
             </Link>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Expert Full Stack development specializing in Backend Services, Cloud Services & Cyber Security. 
-              Available for freelance work and bringing your ideas to life.
+              Expert Full Stack development specializing in Backend Services,
+              Cloud Services & Cyber Security. Available for freelance work and
+              bringing your ideas to life.
             </p>
             <div className="flex space-x-4">
               <a
@@ -69,20 +72,22 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['About', 'Skills', 'Projects', 'Blog', 'Pricing'].map((link) => (
-                <li key={link}>
-                  <Link
-                    to={link.toLowerCase()}
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
-                  >
-                    {link}
-                  </Link>
-                </li>
-              ))}
+              {["About", "Skills", "Projects", "Blog", "Pricing"].map(
+                (link) => (
+                  <li key={link}>
+                    <Link
+                      to={link.toLowerCase()}
+                      spy={true}
+                      smooth={true}
+                      offset={-100}
+                      duration={500}
+                      className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors cursor-pointer"
+                    >
+                      {link}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 

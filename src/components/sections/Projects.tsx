@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import Masonry from "react-responsive-masonry";
 import Section from "../ui/Section";
 import ProjectCard from "../ui/ProjectCard";
@@ -35,8 +34,7 @@ const Projects: React.FC = () => {
         "Interactive tool to visualize various sorting algorithms in action.",
       fullDescription:
         "An educational web application that helps users understand how different sorting algorithms work through interactive visualizations. Users can adjust the speed, array size, and choose from algorithms like Bubble Sort, Quick Sort, Merge Sort, and more.",
-      image:
-        "./shortxtool.png",
+      image: "./shortxtool.png",
       tags: ["React", "Algorithms", "Animation", "Educational"],
       githubUrl: "https://github.com/deepakcode21/Sorting-Algorithm-Visualizer",
       liveUrl: "https://sortxtools.netlify.app/",
@@ -49,8 +47,7 @@ const Projects: React.FC = () => {
         "SnapHive connects users with verified professionals for service booking.",
       fullDescription:
         "SnapHive is a modern, scalable, and user-friendly platform that seamlessly connects users with verified professionals for hassle-free service booking. Whether you’re a customer seeking services, a professional managing bookings, or an admin overseeing operations, SnapHive has got you covered!",
-      image:
-        "./snaphive.png",
+      image: "./snaphive.png",
       tags: ["MERN", "Services", "Bookings", "Full Stack"],
       githubUrl: "https://github.com/deepakcode21/snaphive-services",
       liveUrl: "https://snaphive-service.vercel.app/",
@@ -91,8 +88,7 @@ const Projects: React.FC = () => {
         "SecureVault is allows users to encrypt and decrypt any file using a custom key.",
       fullDescription:
         "A lightweight and secure web application that allows users to encrypt and decrypt any file using a custom key. All operations are done client-side (in browser) or securely handled on the backend, ensuring your sensitive data remains protected.",
-      image:
-        "./secureVault.png",
+      image: "./secureVault.png",
       tags: ["MERN", "Security", "AES-256-CBC", "Cryptography"],
       githubUrl: "https://github.com/deepakcode21/file-cryptography-encryption",
       liveUrl: "https://demo-store.arrowmax.dev",
@@ -112,18 +108,11 @@ const Projects: React.FC = () => {
         "ZapURL is a simple tool to shorten long URLs for easy sharing.",
       fullDescription:
         "ZapURL is a simple URL shortener built with the MERN stack. It provides a user-friendly interface where users can input a long URL and instantly receive a shortened link for easy sharing.",
-      image:
-        "./zapUrl.png",
+      image: "./zapUrl.png",
       tags: ["React", "Short Url", "Software Engineering", "Node"],
       githubUrl: "https://github.com/deepakcode21/zapurl",
       liveUrl: "https://zapurl-three.vercel.app/",
-      techStack: [
-        "React",
-        "MongoDB",
-        "Node",
-        "Express",
-        "Tailwind CSS",
-      ],
+      techStack: ["React", "MongoDB", "Node", "Express", "Tailwind CSS"],
     },
     {
       id: 6,
@@ -132,18 +121,11 @@ const Projects: React.FC = () => {
         "Speechify is a real-time text-to-speech (TTS) and speech-to-text (STT) conversion tool.",
       fullDescription:
         "Speechify is a powerful real-time text-to-speech (TTS) and speech-to-text (STT) conversion tool built using the MERN stack (MongoDB, Express.js, React, Node.js). It allows users to seamlessly convert text into speech and speech into text with a clean and intuitive interface.",
-      image:
-        "./speechify.png",
+      image: "./speechify.png",
       tags: ["React", "Speech", "Real-Time", "Language Support"],
       githubUrl: "https://github.com/deepakcode21/speechify",
       liveUrl: "https://speechify-chi.vercel.app/",
-      techStack: [
-        "React",
-        "Node",
-        "Express",
-        "MongoDB",
-        "Language Support",
-      ],
+      techStack: ["React", "Node", "Express", "MongoDB", "Language Support"],
     },
   ];
 
