@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
               className="text-2xl font-bold cursor-pointer flex items-center mb-4"
             >
               <span className="text-primary-600 dark:text-primary-400">
-                Arrow
+                Deepak
               </span>
-              <span>Max</span>
+              <span>Code</span>
             </Link>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
               Expert Full Stack development specializing in Backend Services,

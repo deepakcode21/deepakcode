@@ -7,7 +7,7 @@ const Pricing: React.FC = () => {
   const pricingPlans = [
     {
       title: "Basic",
-      price: "$300",
+      price: "$599",
       description:
         "Perfect for small businesses needing a simple web presence.",
       features: [
@@ -24,7 +24,7 @@ const Pricing: React.FC = () => {
     },
     {
       title: "Pro",
-      price: "$500",
+      price: "$999",
       description:
         "Ideal for growing businesses needing more features and functionality.",
       features: [
